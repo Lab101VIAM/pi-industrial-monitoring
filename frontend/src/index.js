@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // <-- Nota il /client qui!
-import './index.css';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import './index.css';
 
-// 1. Crea la "radice" dell'app
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// 2. Mostra l'app
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
